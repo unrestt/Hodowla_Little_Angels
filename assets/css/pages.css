@@ -1,0 +1,82 @@
+/* --- Shows Page Specifics (Global) --- */
+.page-hero {
+    padding: 140px 0 60px;
+    /* More padding top for fixed header */
+    background-color: var(--bg-light-gray);
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--primary-blue);
+}
+
+.shows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.show-card {
+    background: var(--bg-white);
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.show-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.show-image-placeholder {
+    height: 250px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.show-details {
+    padding: 25px;
+}
+
+.show-date {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.show-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.show-dog-name {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.show-result {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Shows Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .shows-grid {
+        grid-template-columns: 1fr;
+    }
+}

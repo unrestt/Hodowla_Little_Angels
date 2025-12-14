@@ -1,0 +1,71 @@
+/* --- Components --- */
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    background-color: #35528b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+}
+
+/* Section Utilities */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 60px;
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}

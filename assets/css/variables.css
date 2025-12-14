@@ -1,0 +1,12 @@
+/* --- Variables --- */
+:root {
+    --primary-blue: #4569b1;
+    --text-dark: #333333;
+    --bg-white: #FFFFFF;
+    --bg-light-gray: #F5F5F5;
+    --accent-beige: #EFEBE9;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --max-width: 1200px;
+    --header-height: 80px;
+}

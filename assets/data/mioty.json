@@ -1,0 +1,102 @@
+[
+    {
+        "nazwa_miotu": "Miot L",
+        "data_urodzenia": "2024-11-14",
+        "img": "miot_L.jpeg",
+        "szczenieta": [
+            {
+                "imie": "Loretta",
+                "plec": "K"
+            },
+            {
+                "imie": "Lavinia",
+                "plec": "K"
+            },
+            {
+                "imie": "Leonardo",
+                "plec": "M"
+            },
+            {
+                "imie": "Lilianna",
+                "plec": "K"
+            },
+            {
+                "imie": "Lolivett",
+                "plec": "K"
+            }
+        ]
+    },
+    {
+        "nazwa_miotu": "Miot M",
+        "data_urodzenia": "2025-04-26",
+        "img": "miot_M.jpg",
+        "szczenieta": [
+            {
+                "imie": "Miguel",
+                "plec": "M"
+            },
+            {
+                "imie": "Michelangelo",
+                "plec": "M"
+            },
+            {
+                "imie": "Massimo",
+                "plec": "M"
+            },
+            {
+                "imie": "Melissa",
+                "plec": "K"
+            },
+            {
+                "imie": "Mirabella",
+                "plec": "K"
+            }
+        ]
+    },
+    {
+        "nazwa_miotu": "Miot N",
+        "data_urodzenia": "2025-05-12",
+        "img": "miot_N.jpg",
+        "szczenieta": [
+            {
+                "imie": "Noel",
+                "plec": "M"
+            },
+            {
+                "imie": "Nanett",
+                "plec": "K"
+            }
+        ]
+    },
+    {
+        "nazwa_miotu": "Miot O",
+        "data_urodzenia": "2025-09-10",
+        "img": "miot_O.jpg",
+        "szczenieta": [
+            {
+                "imie": "Orina",
+                "plec": "K"
+            },
+            {
+                "imie": "Orisa",
+                "plec": "K"
+            },
+            {
+                "imie": "Olaf",
+                "plec": "M"
+            },
+            {
+                "imie": "Orin",
+                "plec": "M"
+            },
+            {
+                "imie": "Othello",
+                "plec": "M"
+            },
+            {
+                "imie": "Otis",
+                "plec": "M"
+            }
+        ]
+    }
+]

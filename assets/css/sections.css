@@ -1,0 +1,142 @@
+/* --- About Us --- */
+#about {
+    background-color: var(--bg-light-gray);
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.about-img-box:nth-child(2) {
+    margin-top: 40px;
+}
+
+.association-logo {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+.association-logo img {
+    width: 150px;
+    height: fit-content;
+}
+
+/* --- Breed Info --- */
+#breed {
+    text-align: center;
+}
+
+.breed-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.breed-card {
+    background: var(--bg-white);
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.breed-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.breed-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* --- History/Timeline --- */
+#history {
+    background-color: var(--bg-white);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-blue);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: var(--bg-white);
+    border: 3px solid var(--primary-blue);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::after {
+    right: -8px;
+}
+
+.right::after {
+    left: -8px;
+}
+
+.timeline-content {
+    background-color: var(--accent-beige);
+    padding: 20px 30px;
+    border-radius: 4px;
+    position: relative;
+}
