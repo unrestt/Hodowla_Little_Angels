@@ -1,13 +1,18 @@
 /* --- Responsive Styles --- */
 
 /* Tablet (1024px and below) */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .container {
-        padding: 0 30px;
+        padding: 0 50px;
     }
 
     .hero h1 {
         font-size: 3rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
     }
 
     .about-content {
@@ -101,7 +106,12 @@
 
     .hero-text {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 40px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
     }
 
     .hero h1 {
@@ -145,7 +155,7 @@
     }
 
     .right::after {
-        left: -8px;
+        left: 23px;
     }
 
     /* Contact */

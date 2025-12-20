@@ -94,13 +94,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: var(--bg-white);
     transition: all 0.3s ease;
 }
 
 .social-icons-footer a:hover {
     background-color: var(--primary-blue);
     transform: translateY(-3px);
+}
+
+.social-icons-footer a:hover i {
+    color: var(--bg-white);
 }
 
 .footer-bottom {

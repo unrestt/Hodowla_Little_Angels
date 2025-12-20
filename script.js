@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${puppiesHtml}
                         </div>
 
-                        <a href="#contact" class="contact-btn-litter">Zapytaj o szczeniaka</a>
+                        <a href="index.html#contact" class="contact-btn-litter">Zapytaj o szczeniaka</a>
                     </div>
                 </div>
             `;
