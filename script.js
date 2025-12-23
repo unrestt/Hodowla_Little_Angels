@@ -60,6 +60,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Gallery Slider ---
+    if (document.querySelector('.gallerySwiper')) {
+        const gallerySwiper = new Swiper(".gallerySwiper", {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1.2, /* Peek next slides on mobile */
+            spaceBetween: 10,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0, /* seamless aesthetic or small gap */
+                },
+                1400: {
+                    slidesPerView: 5,
+                    spaceBetween: 0,
+                }
+            },
+        });
+    }
+
     // --- Dynamic Litters & Modal Logic ---
     const littersContainer = document.getElementById('litters-container');
     const modal = document.getElementById('litter-modal');
