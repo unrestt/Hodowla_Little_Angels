@@ -143,6 +143,18 @@ section {
     animation: fadeIn 1s ease forwards;
 }
 
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* --- Header & Navigation --- */
 .main-header {
     background-color: var(--bg-white);
@@ -991,7 +1003,7 @@ section {
 
 /* --- Litters Page Styles --- */
 .pages-hero-litters {
-    background-image: url('../images/hero/slide-2.jpg');
+    background-image: url('assets/images/hero/slide-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
