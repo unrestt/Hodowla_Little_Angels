@@ -1531,6 +1531,58 @@ section {
     }
 }
 
+/* --- Social Promo Styles --- */
+.social-promo-container {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(69, 105, 177, 0.05) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(69, 105, 177, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+}
+
+
+.social-promo-text {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.social-promo-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-blue);
+}
+
+.social-btn i {
+    color: #fff;
+}
+
+.social-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+
 /* --- Responsive Styles --- */
 
 /* Tablet (1024px and below) */

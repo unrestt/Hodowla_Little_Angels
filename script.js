@@ -63,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.heroSwiper')) {
         const swiper = new Swiper(".heroSwiper", {
             loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             speed: 1000,
             autoplay: {
                 delay: 5000,
