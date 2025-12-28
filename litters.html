@@ -101,7 +101,7 @@
         </section>
 
         <!-- Starter Kit Section -->
-        <section class="starter-kit-section">
+        <!-- <section class="starter-kit-section">
             <div class="container">
                 <h2 class="section-title">Wyprawka dla Maluszka</h2>
                 <span class="section-subtitle">Co otrzymuje każdy szczeniak?</span>
@@ -156,6 +156,122 @@
                         <h3>Wsparcie Hodowcy</h3>
                         <p>Służymy radą i pomocą w wychowaniu oraz pielęgnacji szczenięcia przez całe jego życie.</p>
                     </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- Questionnaire Section -->
+        <section class="survey-section reveal">
+            <div class="container">
+                <h2 class="section-title">Ankieta dla Przyszłego Właściciela</h2>
+                <span class="section-subtitle">Chcesz szczeniaka z naszej hodowli? Skontaktuj się z nami!</span>
+
+                <div class="survey-container">
+                    <form id="adoption-survey" class="survey-form">
+                        <div class="form-group-grid">
+                            <!-- Gender Preference -->
+                            <div class="form-group">
+                                <label>Preferowana Płeć</label>
+                                <div class="choice-group" data-group="plec">
+                                    <button type="button" class="choice-btn" data-value="pies">
+                                        <i class="fa-solid fa-mars"></i>
+                                        <span>Pies</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="suka">
+                                        <i class="fa-solid fa-venus"></i>
+                                        <span>Suka</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="dowolnie">
+                                        <i class="fa-solid fa-venus-mars"></i>
+                                        <span>Dowolnie</span>
+                                    </button>
+                                    <input type="hidden" name="preferowana_plec" required>
+                                </div>
+                            </div>
+
+                            <!-- Purpose -->
+                            <div class="form-group">
+                                <label>Przeznaczenie</label>
+                                <div class="choice-group" data-group="przeznaczenie">
+                                    <button type="button" class="choice-btn" data-value="dom">
+                                        <i class="fa-solid fa-house-chimney-window"></i>
+                                        <span>Do towarzystwa</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="wystawy">
+                                        <i class="fa-solid fa-medal"></i>
+                                        <span>Wystawy</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="hodowla">
+                                        <i class="fa-solid fa-dna"></i>
+                                        <span>Hodowla</span>
+                                    </button>
+                                    <input type="hidden" name="przeznaczenie" required>
+                                </div>
+                            </div>
+
+                            <!-- Living Place -->
+                            <div class="form-group">
+                                <label>Miejsce zamieszkania psa</label>
+                                <div class="choice-group" data-group="miejsce">
+                                    <button type="button" class="choice-btn" data-value="dom">
+                                        <i class="fa-solid fa-house"></i>
+                                        <span>Dom</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="mieszkanie">
+                                        <i class="fa-solid fa-building"></i>
+                                        <span>Mieszkanie</span>
+                                    </button>
+                                    <button type="button" class="choice-btn" data-value="ogrod">
+                                        <i class="fa-solid fa-tree"></i>
+                                        <span>Dom z ogrodem</span>
+                                    </button>
+                                    <input type="hidden" name="miejsce_zamieszkania" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-textarea-grid">
+                            <div class="form-group">
+                                <label for="experience">Czy posiadasz doświadczenie w wychowywaniu psów?</label>
+                                <textarea id="experience" name="experience"
+                                    placeholder="Opisz krótko swoje doświadczenie..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="other-animals">Czy posiadasz obecnie inne zwierzęta? Jeżeli tak, to
+                                    jakie?</label>
+                                <textarea id="other-animals" name="other_animals"
+                                    placeholder="Wypisz swoje obecne pupile..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="valued-traits">Jakie cechy najbardziej cenisz u tej rasy? (charakter,
+                                    wygląd)</label>
+                                <textarea id="valued-traits" name="valued_traits"
+                                    placeholder="Co sprawiło, że wybrałeś Shih Tzu?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="undesired-traits">Jakie cechy uważasz za niepożądane?</label>
+                                <textarea id="undesired-traits" name="undesired_traits"
+                                    placeholder="Na co zwracasz szczególną uwagę?"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="about-self">Prosimy o kilka słów o sobie / swojej rodzinie:</label>
+                            <textarea id="about-self" name="about_self"
+                                placeholder="Napisz coś o swoim trybie życia, dlaczego chcesz pieska z naszej hodowli..."
+                                required></textarea>
+                        </div>
+
+                        <div class="survey-footer">
+                            <p class="form-disclaimer">Wypełnienie ankiety nie jest wiążącą rezerwacją, a jedynie
+                                wstępnym krokiem do zapoznania się z potencjalnym opiekunem.</p>
+                            <button type="submit" class="btn survey-submit-btn">Wyślij Zgłoszenie</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

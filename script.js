@@ -328,4 +328,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Adoption Survey Logic ---
+    const surveyForm = document.getElementById('adoption-survey');
+    if (surveyForm) {
+        const choiceGroups = surveyForm.querySelectorAll('.choice-group');
+
+        choiceGroups.forEach(group => {
+            const buttons = group.querySelectorAll('.choice-btn');
+            const hiddenInput = group.querySelector('input[type="hidden"]');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from others
+                    buttons.forEach(b => b.classList.remove('active'));
+                    // Add active to current
+                    btn.classList.add('active');
+                    // Update hidden input
+                    hiddenInput.value = btn.dataset.value;
+                });
+            });
+        });
+
+        surveyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Basic check for choice groups
+            let allSelected = true;
+            choiceGroups.forEach(group => {
+                const hiddenInput = group.querySelector('input[type="hidden"]');
+                if (!hiddenInput.value) {
+                    allSelected = false;
+                    group.classList.add('error-pulse');
+                    setTimeout(() => group.classList.remove('error-pulse'), 1000);
+                }
+            });
+
+            if (!allSelected) {
+                alert('Prosimy o wybranie wszystkich opcji w polach wyboru.');
+                return;
+            }
+
+            // Here we would normally send to backend. 
+            // Since there is no backend, we will show a success message or redirect to mailto
+            const formData = new FormData(surveyForm);
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Form submitted:', data);
+
+            // Visual feedback
+            const submitBtn = surveyForm.querySelector('.survey-submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Wysyłanie...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert('Dziękujemy za wypełnienie ankiety! Skontaktujemy się z Tobą wkrótce.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                surveyForm.reset();
+                surveyForm.querySelectorAll('.choice-btn').forEach(btn => btn.classList.remove('active'));
+            }, 1500);
+        });
+    }
+
+
 });
