@@ -763,26 +763,50 @@ section {
 }
 
 /* Contact Map */
-.contact-map h4 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-}
-
 .contact-map {
     width: 100%;
     max-width: 1000px;
-    margin-top: 40px;
-    border-radius: 16px;
-    overflow: hidden;
+    margin-top: 50px;
 }
 
-.contact-map iframe {
+.map-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.map-title i {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+}
+
+.map-container iframe {
     width: 100%;
-    height: 350px;
-    border-radius: 12px;
+    height: 400px;
     display: block;
+    filter: grayscale(0.2) contrast(1.1);
+    transition: filter 0.4s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0) contrast(1);
 }
 
 /* --- Footer --- */
@@ -794,6 +818,57 @@ section {
     text-decoration: underline;
 }
 
+
+/* --- Back to Top Button --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #35528b;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top i {
+    color: white;
+}
+
+/* Mobile Adjustments for Button */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
 
 /* --- Questionnaire Section --- */
 .survey-section {
