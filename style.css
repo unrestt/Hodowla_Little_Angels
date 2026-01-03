@@ -978,6 +978,18 @@ section {
     gap: 30px;
 }
 
+.form-textarea-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-textarea-grid label {
+    min-height: 3.5rem;
+    /* Adjusted for multiple lines of text */
+    display: flex;
+    align-items: flex-end;
+}
+
 /* Choice Buttons Tweaks */
 .choice-btn {
     min-height: 110px;

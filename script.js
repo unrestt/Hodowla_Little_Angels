@@ -143,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 const current = data.find(l => l.current === true);
-                const history = data.filter(l => l.current !== true);
+                const history = data
+                    .filter(l => l.current !== true)
+                    .sort((a, b) => new Date(b.data_urodzenia) - new Date(a.data_urodzenia));
 
                 renderCurrentLitter(current);
                 renderHistoryLitters(history);
