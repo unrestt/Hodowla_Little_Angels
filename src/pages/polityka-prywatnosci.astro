@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout 
+    title="Polityka Prywatności – Hodowla Little Angels" 
+    description="Zasady ochrony prywatności i plików cookies na stronie Hodowli Little Angels.">
+    
+    <main class="policy-wrapper">
+        <div class="container policy-container">
+            <header class="policy-header">
+                <h1 class="policy-title">Polityka Prywatności</h1>
+                <p class="policy-intro">
+                    Poniższy dokument określa zasady korzystania z plików cookies oraz zasady ochrony prywatności na stronie <strong>Hodowli Little Angels</strong>.
+                </p>
+            </header>
+
+            <ol class="policy-list">
+                <li class="policy-item">
+                    <h2>Administrator Strony</h2>
+                    <p>
+                        Właścicielem serwisu oraz administratorem danych jest domowa hodowla psów rasy Shih Tzu:
+                    </p>
+                    <div class="policy-subbox">
+                        <strong>Hodowla Little Angels</strong><br>
+                        Ograszka 43B, Polska<br>
+                        E-mail: <a href="mailto:hodowla.littleangels@gmail.com">hodowla.littleangels@gmail.com</a><br>
+                        Tel: <a href="tel:+48791619015">+48 791 619 015</a>
+                    </div>
+                </li>
+
+                <li class="policy-item">
+                    <h2>Brak Formularzy i Rejestracji</h2>
+                    <p>
+                        Serwis ma charakter wyłącznie informacyjny. Na stronie <strong>nie ma żadnych formularzy kontaktowych</strong>, ankiet online ani kont użytkowników zbierających dane osobowe. 
+                    </p>
+                    <p>
+                        Wszelki kontakt z hodowlą odbywa się z własnej inicjatywy użytkownika – poprzez bezpośredni telefon, wiadomość e-mail lub wiadomości prywatne w naszych mediach społecznościowych.
+                    </p>
+                </li>
+
+                <li class="policy-item">
+                    <h2>Pliki Cookies (Ciasteczka)</h2>
+                    <p>
+                        Strona gromadzi wyłącznie dane przesyłane za pomocą plików <strong>cookies</strong> (małych plików tekstowych zapisywanych w Twojej przeglądarce). Służą one do:
+                    </p>
+                    <ul class="policy-sublist">
+                        <li><strong>Prawidłowego działania witryny:</strong> wyświetlania układu, sliderów zdjęć oraz zapamiętania Twojego wyboru na banerze cookies.</li>
+                        <li><strong>Obsługi Google Maps:</strong> wyświetlania interaktywnej mapy z lokalizacją hodowli w sekcji kontaktowej.</li>
+                    </ul>
+                </li>
+
+                <li class="policy-item">
+                    <h2>Zarządzanie Plikami Cookies</h2>
+                    <p>
+                        Użytkownik może w każdej chwili samodzielnie zmienić warunki przechowywania cookies w ustawieniach swojej przeglądarki internetowej (np. Chrome, Firefox, Safari, Edge), a także usunąć zapisane wcześniej pliki.
+                    </p>
+                </li>
+
+                <li class="policy-item">
+                    <h2>Prawa Użytkownika</h2>
+                    <p>
+                        Osoby kontaktujące się z hodowlą mają prawo wglądu do swoich danych, ich poprawiania, żądania zaprzestania przetwarzania lub ich całkowitego usunięcia.
+                    </p>
+                </li>
+
+                <li class="policy-item">
+                    <h2>Kontakt</h2>
+                    <p>
+                        W razie pytań dotyczących polityki prywatności prosimy o kontakt pod adresem: 
+                        <a href="mailto:hodowla.littleangels@gmail.com">hodowla.littleangels@gmail.com</a>.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </main>
+
+</Layout>
+
+<style>
+.policy-wrapper {
+    background-color: #fff;
+    padding: 130px 0 80px;
+}
+
+.policy-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.policy-header {
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+.policy-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.policy-intro {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Elegant Numbered List */
+.policy-list {
+    list-style: none;
+    counter-reset: policy-counter;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-item {
+    position: relative;
+    counter-increment: policy-counter;
+    padding-left: 50px;
+    margin-bottom: 35px;
+}
+
+.policy-item::before {
+    content: counter(policy-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #edf2f9;
+    color: var(--primary-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.policy-item h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.policy-item p {
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
+
+.policy-item p:last-child {
+    margin-bottom: 0;
+}
+
+.policy-subbox {
+    background: #f8fafc;
+    border-left: 3px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin-top: 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.policy-subbox a, .policy-item a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-subbox a:hover, .policy-item a:hover {
+    text-decoration: underline;
+}
+
+.policy-sublist {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.policy-sublist li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+    .policy-wrapper {
+        padding: 110px 0 60px;
+    }
+    .policy-title {
+        font-size: 1.8rem;
+    }
+    .policy-item {
+        padding-left: 42px;
+        margin-bottom: 28px;
+    }
+    .policy-item::before {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+    .policy-item h2 {
+        font-size: 1.15rem;
+        line-height: 28px;
+    }
+}
+</style>

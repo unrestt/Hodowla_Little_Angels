@@ -1,85 +1,122 @@
-<!DOCTYPE html>
-<html lang="pl">
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Angels - Profesjonalna Hodowla Shih Tzu ZKwP/FCI</title>
-    <meta name="description"
-        content="Little Angels - domowa hodowla psów rasy Shih Tzu. Stawiamy na zdrowie, doskonały rodowód i socjalizację. Sprawdź nasze aktualne mioty i dowiedz się więcej o rasie.">
-    <meta name="keywords"
-        content="Shih Tzu, hodowla Shih Tzu, szczeniaki Shih Tzu, Little Angels, ZKwP, FCI, hodowla psów rasowych, Ograszka">
+    <!-- Schema.org JSON-LD Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "AnimalShelter"],
+          "@id": "https://littleangelsshihtzu.pl/#organization",
+          "name": "Hodowla Little Angels",
+          "alternateName": "Little Angels Shih Tzu",
+          "description": "Profesjonalna i domowa hodowla psów rasy Shih Tzu z rodowodem ZHPR / UCI. Zdrowe, zsocjalizowane szczenięta z pasją i miłością.",
+          "url": "https://littleangelsshihtzu.pl/",
+          "logo": "https://littleangelsshihtzu.pl/assets/images/logos/logo_black.png",
+          "image": "https://littleangelsshihtzu.pl/assets/images/logos/logo_black.png",
+          "telephone": "+48791619015",
+          "email": "hodowla.littleangels@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ograszka 43B",
+            "addressLocality": "Ograszka",
+            "addressCountry": "PL"
+          },
+          "sameAs": [
+            "https://www.facebook.com/hodowlalittleangels",
+            "https://www.instagram.com/hodowla_little_angels/",
+            "https://www.tiktok.com/@hodowlalittleangels"
+          ],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          "priceRange": "$",
+          "keywords": "hodowla little angels, Shih Tzu, szczeniaki Shih Tzu, hodowla psów rasowych, ZHPR, UCI"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://littleangelsshihtzu.pl/#website",
+          "url": "https://littleangelsshihtzu.pl/",
+          "name": "Hodowla Little Angels",
+          "description": "Oficjalna strona hodowli psów rasy Shih Tzu – Little Angels",
+          "inLanguage": "pl",
+          "publisher": {
+            "@id": "https://littleangelsshihtzu.pl/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://littleangelsshihtzu.pl/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czy szczenięta Shih Tzu posiadają rodowód?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, wszystkie nasze szczenięta otrzymują metrykę ZHPR / UCI, która uprawnia do wyrobienia wielopokoleniowego rodowodu uznawanego na całym świecie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak wygląda proces rezerwacji szczenięcia Shih Tzu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aby zarezerwować szczenię, prosimy o kontakt telefoniczny. Po wstępnej rozmowie i decyzji pobieramy zadatek, który jest gwarancją rezerwacji wybranego maluszka."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "W jakim wieku można odebrać szczenię Shih Tzu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Szczenięta są gotowe do odbioru po ukończeniu minimum 10 tygodni życia. W tym czasie są już po przeglądzie hodowlanym, szczepieniach i odrobaczeniu stosownym do wieku."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy możliwy jest transport szczenięcia za granicę?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie oferujemy bezpośredniego transportu psa za granicę, ale kompleksowo pomagamy w wyrobieniu wszelkich dokumentów wyjazdowych oraz paszportu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Co zawiera wyprawka szczenięcia Shih Tzu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Każdy szczeniak otrzymuje bogatą wyprawkę: legowisko, karmę, dokumenty, zabawki, kocyk z zapachem mamy oraz poradnik nowego nabywcy."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hodowlalittleangels.pl/">
-    <meta property="og:title" content="Little Angels - Profesjonalna Hodowla Shih Tzu">
-    <meta property="og:description"
-        content="Domowa hodowla Shih Tzu z pasją. Zdrowe szczenięta z doskonałym rodowodem ZKwP/FCI.">
-    <meta property="og:image" content="https://hodowlalittleangels.pl/assets/images/logos/logo_black.png">
+<Layout title="Hodowla Little Angels – Shih Tzu ZHPR / UCI | Ograszka">
 
-    <link rel="shortcut icon" href="assets/images/logos/favicon.jpg" type="image/x-icon">
-    <link rel="canonical" href="https://hodowlalittleangels.pl/" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
 
     <!-- Navigation -->
-    <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span class="logo-text">Little Angels</span>
-            </a>
-
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">O Hodowli</a></li>
-                    <li><a href="#breed">O Rasie</a></li>
-                    <li><a href="litters.html">Nasze Mioty</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
-
-            <div class="social-icons-header">
-                <!-- Placeholders using text logic or basic shapes if no font library yet,
-                     but normally we'd use FontAwesome or similar. using SVGs for best perf. -->
-                <a href="https://www.facebook.com/hodowlalittleangels" aria-label="Facebook" target="_blank"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/hodowla_little_angels/" aria-label="Instagram" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@hodowlalittleangels" aria-label="Tiktok" target="_blank"><i
-                        class="fa-brands fa-tiktok"></i></a>
-            </div>
-
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <!-- Swiper -->
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('assets/images/hero/slide-1.png');">
+                <div class="swiper-slide" style="background-image: url('/assets/images/hero/slide-1.png');">
                 </div>
-                <div class="swiper-slide" style="background-image: url('assets/images/hero/slide-2.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('assets/images/hero/slide-3.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('assets/images/hero/slide-4.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('/assets/images/hero/slide-2.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('/assets/images/hero/slide-3.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('/assets/images/hero/slide-4.jpg');"></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -91,21 +128,26 @@
         <div class="hero-overlay-content">
             <div class="container hero-container">
                 <div class="hero-text fade-in">
+                    <p class="hero-eyebrow">Hodowla psów rasowych Shih Tzu</p>
                     <h1>Little Angels</h1>
-                    <p class="hero-subtitle">Hodowla psów rasowych Shih Tzu</p>
+                    <div class="hero-divider"></div>
+                    <p class="hero-subtitle">Shih Tzu z pasją i miłością</p>
 
                     <blockquote class="hero-quote">
-                        "Kiedy patrzę w oczy zwierzęcia, nie widzę w nich zwierzęcia.<br> Widzę przyjaciela. Czuję
-                        duszę."
-                        <br>
+                        „Kiedy patrzę w oczy zwierzęcia, nie widzę w nich zwierzęcia.<br>
+                        Widzę przyjaciela. Czuję duszę."
                         <cite>– A.D. Williams</cite>
                     </blockquote>
 
-                    <a href="#contact" class="btn">Skontaktuj się</a>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-hero">Skontaktuj się</a>
+                        <a href="#about" class="btn-hero-outline">Poznaj nas</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -117,7 +159,7 @@
                     <div class="about-text">
                         <p>Witaj w <strong>Little Angels</strong>, miejscu, gdzie miłość do rasy Shih Tzu łączy się z
                             profesjonalnym podejściem do hodowli. Naszą misją jest hodowanie zdrowych, doskonale
-                            zsocjalizowanych psów, które staną się nie tylko dumą na wystawach, ale przede wszystkim
+                            zsocjalizowanych psów, które staną się przede wszystkim
                             wspaniałymi towarzyszami życia.</p>
                         <p>Wszystkie nasze psy są pełnoprawnymi członkami rodziny. Dbamy o ich rozwój fizyczny i
                             psychiczny
@@ -125,21 +167,83 @@
                             kynologicznej.</p>
                     </div>
                     <div class="association-logo">
-                        <img src="assets/images/logos/uci.png" alt="Logo UCI - United Kennel Clubs International"
+                        <img src="/assets/images/logos/uci.png" alt="Logo UCI - United Kennel Clubs International"
                             loading="lazy">
-                        <img src="assets/images/logos/zhpr.png" alt="Logo ZHPR - Związek Hodowców Psów Rasowych"
+                        <img src="/assets/images/logos/zhpr.png" alt="Logo ZHPR - Związek Hodowców Psów Rasowych"
                             loading="lazy">
                     </div>
                 </div>
                 <div class="about-images">
                     <div class="about-img-box reveal">
-                        <img src="assets/images/logos/logo_black.png" alt="Logo Hodowli Little Angels" loading="lazy">
+                        <img src="/assets/images/logos/logo_black.png" alt="Logo Hodowli Little Angels" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== DLACZEGO MY ===== -->
+    <section id="why-us" class="why-us-section">
+        <div class="container">
+            <h2 class="section-title reveal">Dlaczego My?</h2>
+            <span class="section-subtitle reveal">To co nas wyróżnia</span>
+            <div class="why-us-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Pełne szczepienia</h3>
+                    <p>Każdy szczeniak opuszcza hodownię po komplecie szczepień i odrobaczeniu, potwierdzonych w książeczce zdrowia.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-paw"></i></div>
+                    <h3>Socjalizacja od 1. dnia</h3>
+                    <p>Maluszki wychowujemy w domu, wśród codziennych dźwięków i ludzi — trafiają do Ciebie pewne siebie i otwarte.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Rodowód ZHPR / UCI</h3>
+                    <p>Wszystkie szczenięta otrzymują metrykę ZHPR uznawaną na całym świecie, gwarantującą czystość rasy.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Wsparcie po zakupie</h3>
+                    <p>Jesteśmy dostępni zawsze. Doradzamy w kwestiach pielęgnacji, diety i wychowania przez całe życie psa.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-home"></i></div>
+                    <h3>Dom, nie hodowla</h3>
+                    <p>Nasze psy żyją razem z nami. Każdy szczeniak otrzymuje miłość, uwagę i staranny indywidualny rozwój.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LICZNIKI ===== -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="18">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Miotów</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="81">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Szczeniąt</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Lat doświadczenia</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-plus">%</span>
+                    <span class="stat-label">Szczęśliwych rodzin</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Breed Info Section -->
     <section id="breed">
         <div class="container">
@@ -148,19 +252,19 @@
 
             <div class="breed-cards">
                 <div class="breed-card reveal">
-                    <span class="breed-icon">❤</span> <!-- Placeholder Icon -->
+                    <span class="breed-icon"><i class="fa-solid fa-heart"></i></span>
                     <h3>Charakter</h3>
                     <p>Shih Tzu to psy o niezwykle pogodnym usposobieniu. Są towarzyskie, czułe i mocno przywiązane do
                         opiekunów. Idealnie sprawdzają się jako psy do towarzystwa dla rodzin i osób starszych.</p>
                 </div>
                 <div class="breed-card reveal">
-                    <span class="breed-icon">✂</span> <!-- Placeholder Icon -->
+                    <span class="breed-icon"><i class="fa-solid fa-scissors"></i></span>
                     <h3>Pielęgnacja</h3>
                     <p>Wymagają regularnej pielęgnacji, zwłaszcza jeśli mają długą, wystawową szatę. Codzienne czesanie
                         i regularne kąpiele to podstawa ich zdrowego wyglądu.</p>
                 </div>
                 <div class="breed-card reveal">
-                    <span class="breed-icon">⚖</span> <!-- Placeholder Icon -->
+                    <span class="breed-icon"><i class="fa-solid fa-scale-balanced"></i></span>
                     <h3>Standard</h3>
                     <p>Pies mały, ale solidny. O dostojnym sposobie bycia i charakterystycznej "chryzantemowej" głowie.
                         Ruch płynny i elegancki, podkreślający ich arystokratyczne pochodzenie.</p>
@@ -269,6 +373,44 @@
         </div>
     </section>
 
+    <!-- ===== PROCES ZAKUPU ===== -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title reveal">Jak wygląda proces zakupu?</h2>
+            <span class="section-subtitle reveal">Cztery proste kroki do Twojego małego aniołka</span>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-connector"></div>
+                    <div class="step-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Kontakt</h3>
+                    <p>Napisz lub zadzwoń do nas. Chętnie odpowiemy na wszystkie pytania dotyczące rasy i dostępności szczeniąt.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-connector"></div>
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Rozmowa</h3>
+                    <p>Poznajemy się bliżej. Porozmawiamy o Twoim stylu życia, oczekiwaniach i dopasujemy idealnego szczeniaka.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-connector"></div>
+                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Rezerwacja</h3>
+                    <p>Po wyborze szczeniaka pobieramy zadatek jako gwarancję rezerwacji. Pozostajemy w stałym kontakcie aż do odbioru.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-connector hide-connector"></div>
+                    <div class="step-icon"><i class="fas fa-home"></i></div>
+                    <h3>Odbiór</h3>
+                    <p>Odbierasz szczeniaka po ukończeniu 10 tygodni z kompletem dokumentów, wyprawką i naszym pełnym wsparciem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
@@ -282,8 +424,7 @@
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tak, wszystkie nasze szczenięta otrzymują metrykę Zwiąsku Kynologicznego w Polsce (ZKwP /
-                            FCI), która uprawnia do wyrobienia wielopokoleniowego rodowodu uznawanego na całym świecie.
+                        <p>Tak, wszystkie nasze szczenięta otrzymują metrykę ZHPR / UCI, która uprawnia do wyrobienia wielopokoleniowego rodowodu uznawanego na całym świecie.
                         </p>
                     </div>
                 </div>
@@ -305,19 +446,18 @@
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Szczenięta są gotowe do odbioru po ukończeniu minimum 8-10 tygodni życia. W tym czasie są już
+                        <p>Szczenięta są gotowe do odbioru dopiero w dniu, kiedy kończą 10 tygodni życia. W tym czasie są już
                             po przeglądzie hodowlanym, szczepieniach i odrobaczeniu stosownym do wieku.</p>
                     </div>
                 </div>
 
                 <div class="faq-item reveal">
                     <div class="faq-question">
-                        <h3>Czy możliwy jest transport za granicę?</h3>
+                        <h3>Czy pomagacie w transporcie szczeniaka?</h3>
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tak, pomagamy w organizacji transportu szczenięcia za granicę. Przygotowujemy również
-                            paszport oraz niezbędne dokumenty eksportowe zgodnie z wymogami danego kraju.</p>
+                        <p>Nie pomagamy fizycznie w transporcie szczenięcia do nowego domu. Zapewniamy jednak pełną pomoc ze wszystkimi niezbędnymi dokumentami, w tym pomagamy w wyrobieniu paszportu oraz przygotowujemy dokumenty eksportowe, jeśli piesek wyjeżdża za granicę.</p>
                     </div>
                 </div>
 
@@ -327,8 +467,7 @@
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Każdy szczeniak otrzymuje wyprawkę na start: karmę, którą jadł w hodowli, kocyk z zapachem
-                            mamy, ulubioną zabawkę oraz instrukcję opieki zawierającą najważniejsze informacje.</p>
+                        <p>Dla każdego maluszka przygotowaliśmy piękną, bogatą wyprawkę na start w nowym domu. W jej skład wchodzi: wygodne <strong>legowisko</strong>, zapas sprawdzonej <strong>karmy</strong>, komplet <strong>dokumentów</strong>, ulubione <strong>zabawki</strong>, <strong>kocyk z zapachem mamy</strong> ułatwiający adaptację oraz nasz autorski <strong>poradnik nowego nabywcy</strong> ze wskazówkami na pierwsze dni.</p>
                     </div>
                 </div>
             </div>
@@ -418,82 +557,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Brand Column -->
-                <div class="footer-col footer-brand">
-                    <span class="footer-logo-text">Little Angels</span>
-                    <p>Profesjonalna hodowla Shih Tzu z pasją i miłością. Nasze psy to nasza rodzina.</p>
-                    <div class="footer-logo-image">
-                        <img src="assets/images/logos/logo_white.png" alt="Little Angels Logo białe" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- Navigation Column -->
-                <div class="footer-col footer-links">
-                    <h3>Nawigacja</h3>
-                    <ul>
-                        <li><a href="#hero">Strona Główna</a></li>
-                        <li><a href="#about">O Hodowli</a></li>
-                        <li><a href="#breed">O Rasie</a></li>
-                        <li><a href="litters.html">Mioty</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="footer-col footer-contact">
-                    <h3>Kontakt</h3>
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+48 791 619 015</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>hodowla.littleangels@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Ograszka 43B, Polska</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Socials Column -->
-                <div class="footer-col footer-socials">
-                    <h3>Śledź nas</h3>
-                    <div class="social-icons-footer">
-                        <a href="https://www.facebook.com/hodowlalittleangels" aria-label="Facebook" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/hodowla_little_angels/" aria-label="Instagram"
-                            target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@hodowlalittleangels" aria-label="Tiktok" target="_blank">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Little Angels. Wszelkie prawa zastrzeżone. | Projekt: <a href="https://bartoszkutnik.pl/"
-                        id="footer-author" target="_blank">Bartosz Kutnik</a> | <a href="polityka-prywatnosci.html"
-                        style="color: inherit; text-decoration: none;">Polityka Prywatności</a></p>
-            </div>
-        </div>
-    </footer>
+    
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Wróć do góry">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="https://kit.fontawesome.com/70f2470b08.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    <!-- ===== COOKIE CONSENT ===== -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Informacja o plikach cookie">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="fa-solid fa-cookie-bite cookie-icon"></i>
+                <p>Ta strona używa plików <strong>cookie</strong> oraz Google Maps do prawidłowego działania. Kontynuując przeglądanie, akceptujesz naszą
+                    <a href="/polityka-prywatnosci">Politykę Prywatności</a>.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Akceptuję</button>
+                <button id="cookie-reject" class="cookie-btn cookie-btn-reject">Tylko niezbędne</button>
+            </div>
+        </div>
+    </div>
 
-</html>
+    
+    
+    
+
+</Layout>

@@ -1,0 +1,538 @@
+[
+  {
+    "nazwa_miotu": "Miot A",
+    "data_urodzenia": "2019-12-21",
+    "img": "miot_A.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Arisa",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Aslan",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Archie",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Arron",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot B",
+    "data_urodzenia": "2020-09-19",
+    "img": "miot_B.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Baffi",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Belami",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Bonni",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Bella",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Baloo",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Black Women",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Bessi",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Benji",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot C",
+    "data_urodzenia": "2021-02-10",
+    "img": "miot_C.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Carmen",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Charlotta",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Charlie",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot D",
+    "data_urodzenia": "2021-02-10",
+    "img": "miot_D.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Dante",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Diego",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Diana",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Dasti",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Don Pablo",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Demi",
+        "plec": "K",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot E",
+    "data_urodzenia": "2022-02-27",
+    "img": "miot_E.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Erika",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Ellie",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Eliot",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Elias",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Elza",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Emi",
+        "plec": "K",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot F",
+    "data_urodzenia": "2022-05-11",
+    "img": "miot_F.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Frodo",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Fabio",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot G",
+    "data_urodzenia": "2022-05-15",
+    "img": "miot_G.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Gucci",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Gabbi",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Goya",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Giselle",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Gloria",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Grey",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot H",
+    "data_urodzenia": "2023-03-14",
+    "img": "miot_H.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Holly",
+        "plec": "K",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot I",
+    "data_urodzenia": "2023-08-27",
+    "img": "miot_I.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Ismena",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Izmir",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot J",
+    "data_urodzenia": "2023-09-04",
+    "img": "miot_J.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Jagoda",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Jasmina",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Joel",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Jeremi",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Jerry",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Jin",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Jimmy",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot K",
+    "data_urodzenia": "2023-09-28",
+    "img": "miot_K.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Karmen",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Kobi",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Karmel",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Kaszmir",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Kamea",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Kenzo",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Kjara",
+        "plec": "K",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot L",
+    "data_urodzenia": "2024-11-13",
+    "img": "miot_L.jpeg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Loretta",
+        "plec": "K",
+        "reserved": false
+      },
+      {
+        "imie": "Lavinia",
+        "plec": "K",
+        "reserved": false
+      },
+      {
+        "imie": "Leonardo",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Lilianna",
+        "plec": "K",
+        "reserved": false
+      },
+      {
+        "imie": "Lolivett",
+        "plec": "K",
+        "reserved": false
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot M",
+    "data_urodzenia": "2025-04-26",
+    "img": "miot_M.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Miguel",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Michelangelo",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Massimo",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Melissa",
+        "plec": "K",
+        "reserved": false
+      },
+      {
+        "imie": "Mirabella",
+        "plec": "K",
+        "reserved": false
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot N",
+    "data_urodzenia": "2025-05-12",
+    "img": "miot_N.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Noel",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Nanett",
+        "plec": "K",
+        "reserved": false
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot O",
+    "data_urodzenia": "2025-09-10",
+    "img": "miot_O.jpg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Oriana",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Orisa",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Olaf",
+        "plec": "M",
+        "reserved": false
+      },
+      {
+        "imie": "Orin",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Othello",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Otis",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot P",
+    "data_urodzenia": "2026-03-10",
+    "img": "Miot_P.jpeg",
+    "current": false,
+    "szczenieta": [
+      {
+        "imie": "Pasja",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Prada",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Pedro",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Parys",
+        "plec": "M",
+        "reserved": true
+      },
+      {
+        "imie": "Polly",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Picasso",
+        "plec": "M",
+        "reserved": true
+      }
+    ]
+  },
+  {
+    "nazwa_miotu": "Miot R",
+    "data_urodzenia": "2026-08-04",
+    "img": "Miot_R.jpeg",
+    "current": true,
+    "szczenieta": [
+      {
+        "imie": "Rosalia",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Rianna",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Ravena",
+        "plec": "K",
+        "reserved": true
+      },
+      {
+        "imie": "Romeo",
+        "plec": "M",
+        "reserved": false
+      }
+    ]
+  }
+]

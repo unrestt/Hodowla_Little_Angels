@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import mioty from '../data/mioty.json';
+
+const currentLitter = mioty.find(m => m.current);
+const historyLitters = mioty
+    .filter(m => !m.current)
+    .sort((a, b) => new Date(b.data_urodzenia).getTime() - new Date(a.data_urodzenia).getTime());
+
+const formatDate = (dateString: string) => {
+    if (!dateString) return "";
+    const [year, month, day] = dateString.split('-');
+    return `${day}.${month}.${year}`;
+};
+---
+<Layout title="Nasze Mioty | Hodowla Little Angels" description="Aktualne i historyczne mioty rasy Shih Tzu w hodowli Little Angels. Szczenięta z rodowodem ZHPR / UCI.">
+    <!-- Page Hero -->
+    <section class="page-hero pages-hero-litters">
+        <div class="container">
+            <h1 class="page-title">Nasze Mioty</h1>
+        </div>
+    </section>
+
+    <!-- Current Litter Section -->
+    <section class="litters-content" style="padding: 4rem 0;">
+        <div class="container">
+            <div id="current-litter-section" class="litter-section">
+                <h2 class="section-title">Aktualne Szczenięta</h2>
+                
+                {currentLitter ? (
+                    <div id="current-litter-container">
+                        <div class="current-litter-display">
+                            <div class="current-litter-image">
+                                <img src={`/assets/images/mioty_images/${currentLitter.img}`} alt={currentLitter.nazwa_miotu} />
+                            </div>
+                            <div class="current-litter-info">
+                                <h3>{currentLitter.nazwa_miotu}</h3>
+                                <p class="current-litter-date"><i class="fa-regular fa-calendar"></i> Urodzone: {formatDate(currentLitter.data_urodzenia)}</p>
+                                
+                                <div class="current-puppies-section">
+                                    <h4>Szczenięta w tym miocie:</h4>
+                                    <div class="current-puppies-list">
+                                        {currentLitter.szczenieta && currentLitter.szczenieta.map(puppy => (
+                                            <div class={`current-puppy-tag ${puppy.reserved ? 'is-reserved' : 'is-available'}`}>
+                                                {puppy.plec === 'samiec' || puppy.plec === 'M' ? (
+                                                    <i class="fa-solid fa-mars u-male"></i>
+                                                ) : (
+                                                    <i class="fa-solid fa-venus u-female"></i>
+                                                )}
+                                                {' '}{puppy.imie}{' '}
+                                                {puppy.reserved ? (
+                                                    <i class="fa-solid fa-ban status-icon reserved" title="Zarezerwowany"></i>
+                                                ) : (
+                                                    <i class="fa-regular fa-circle-check status-icon available" title="Dostępny"></i>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <p style="margin-top: 15px; font-size: 0.95rem; color: #666; font-style: italic;">
+                                    Więcej zdjęć i filmów szczeniąt znajdziesz na naszych profilach.
+                                </p>
+                                <a href="/#contact" class="contact-btn-litter" style="margin-top: 20px;">Zapytaj o szczeniaka</a>
+                            </div>
+                        </div>
+
+                        {currentLitter.nazwa_miotu === 'Miot R' && (
+                            <div class="romeo-premium-card">
+                                <div class="romeo-info">
+                                    <h4 class="romeo-name">Romeo <i class="fas fa-mars" style="color: #4569b1;"></i></h4>
+                                    <p class="romeo-desc">Romeo to nasz wyjątkowy, uroczy i bardzo kontaktowy chłopak o pięknej budowie. Uwielbia zabawy, przytulanie i spędzanie czasu z człowiekiem. Szuka kochającej rodziny, której odda całe swoje małe psie serduszko!</p>
+                                    <ul class="romeo-features">
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Kompletnie zaszczepiony i odrobaczony</li>
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Otrzyma pełną dokumentację i metrykę ZHPR</li>
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Opuści hodowlę z bogatą wyprawką</li>
+                                    </ul>
+                                    <a href="/#contact" class="btn btn-hero romeo-btn">Zapytaj o Romeo</a>
+                                </div>
+                                <div class="romeo-gallery-container">
+                                    <div class="swiper romeoSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" alt="Romeo - zdjęcie 1" /></div>
+                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" alt="Romeo - zdjęcie 2" /></div>
+                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" alt="Romeo - zdjęcie 3" /></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                ) : (
+                    <div class="no-litters-message">
+                        <i class="fa-solid fa-paw"></i>
+                        <p>Obecnie nie posiadamy dostępnych szczeniąt. Zapraszamy do śledzenia naszych mediów społecznościowych.</p>
+                        <a href="/#contact" class="btn btn-hero" style="margin-top: 15px;">Zapisz się na listę oczekujących</a>
+                    </div>
+                )}
+            </div>
+        </div>
+    </section>
+
+    <!-- History Litters -->
+    <section class="litters-history">
+        <div class="container">
+            <h2 class="section-title">Poprzednie Mioty</h2>
+            <div id="litters-container" class="litters-grid">
+                {historyLitters.map(litter => (
+                    <article class="litter-card">
+                        <div class="litter-image">
+                            <img src={`/assets/images/mioty_images/${litter.img}`} alt={litter.nazwa_miotu} loading="lazy" />
+                        </div>
+                        <div class="litter-details">
+                            <div>
+                                <h3 class="litter-title">{litter.nazwa_miotu}</h3>
+                                <span class="litter-date">Data urodzenia: {formatDate(litter.data_urodzenia)}</span>
+                            </div>
+                            <button class="litter-btn" onclick={`window.openLitterModal(${JSON.stringify(litter)})`}>Zobacz więcej</button>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for puppies -->
+    <div id="litter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">Nazwa Miotu</h2>
+                <p id="modal-date">Data urodzenia: DD.MM.YYYY</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="Zdjęcie miotu">
+                </div>
+                <div class="modal-puppies">
+                    <h3>Szczenięta</h3>
+                    <ul id="modal-puppies-list" class="puppies-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
