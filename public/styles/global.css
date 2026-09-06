@@ -644,12 +644,37 @@ section {
 .association-logo {
     display: flex;
     flex-direction: row;
-    width: 300px;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    max-width: 100%;
 }
 
 .association-logo img {
-    width: 150px;
-    height: fit-content;
+    height: 70px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.04));
+    transition: transform 0.3s ease;
+}
+
+.association-logo img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .association-logo {
+        justify-content: center;
+        gap: 20px;
+        margin: 25px auto 0 auto;
+    }
+
+    .association-logo img {
+        height: 60px;
+        max-width: 110px;
+    }
 }
 
 /* --- Breed Info --- */
