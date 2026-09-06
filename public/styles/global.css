@@ -645,18 +645,18 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 25px;
-    margin-top: 25px;
+    gap: 30px;
+    margin-top: 35px;
     max-width: 100%;
 }
 
 .association-logo img {
-    height: 70px;
+    height: 115px;
     width: auto;
-    max-width: 130px;
+    max-width: 160px;
     object-fit: contain;
     display: block;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.04));
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.05));
     transition: transform 0.3s ease;
 }
 
@@ -667,13 +667,13 @@ section {
 @media (max-width: 768px) {
     .association-logo {
         justify-content: center;
-        gap: 20px;
-        margin: 25px auto 0 auto;
+        gap: 25px;
+        margin: 30px auto 0 auto;
     }
 
     .association-logo img {
-        height: 60px;
-        max-width: 110px;
+        height: 85px;
+        max-width: 130px;
     }
 }
 
