@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -140,8 +140,8 @@ import Layout from '../layouts/Layout.astro';
                     </blockquote>
 
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-hero">Skontaktuj się</a>
-                        <a href="#about" class="btn-hero-outline">Poznaj nas</a>
+                        <a href="#kontakt" class="btn btn-hero">Skontaktuj się</a>
+                        <a href="#o-hodowli" class="btn-hero-outline">Poznaj nas</a>
                     </div>
                 </div>
             </div>
@@ -308,68 +308,160 @@ import Layout from '../layouts/Layout.astro';
             <h2 class="section-title reveal">Opinie</h2>
             <span class="section-subtitle reveal">Zaufali nam i są szczęśliwi</span>
 
-            <div class="testimonials-grid">
+            <!-- Slider row: [◀] [swiper] [▶] -->
+            <div class="testimonials-slider-row">
+                <button class="testimonials-prev t-nav-btn" aria-label="Poprzednia opinia">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
 
-                <div class="testimonial-card reveal">
-                    <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
-                    <p class="testimonial-text">"z całego serduszka polecamy hodowlę ❤️ Massimo to piękny pies który
-                        wniósł trochę szaleństwa do naszego domu. Nauczony manier, kontaktowy, odważny, nauczony
-                        czystości. Jesteśmy wdzięczni za pracę i serce włożoną w wychowanie."</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Monika</h4>
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                <div class="swiper testimonialsSwiper">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„z całego serduszka polecamy hodowlę ❤️ Massimo to piękny pies który wniósł trochę szaleństwa do naszego domu. Nauczony manier, kontaktowy, odważny, nauczony czystości. Jesteśmy wdzięczni za pracę i serce włożoną w wychowanie."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Monika</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-card reveal">
-                    <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
-                    <p class="testimonial-text">"Bardzo polecam hodowlę, pieski dobrze wychowane, dobrze ułożone,
-                        grzeczne, spokojne. Szczeniaczek "wiedział " do czego służy mata. Kontakt z hodowlą super,
-                        Pani bardzo pomocna, chętnie udzielająca odpowiedzi na pytania dotyczące np. kosmetyków czy
-                        karmy. Bardzo polecam!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Krzysztof</h4>
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Polecam hodowle Little Angels! Wspaniały hodowca, mamy cudownego chłopca z hodowli.❤️Pieski są bardzo zadbane żyją w warunkach domowych otoczone miłością  rodziny, przyzwyczajone do dzieci 🫶
+Hodowla prowadzona z miłość do rasy, stały kontakt z hodowcą to coś cudownego na każde pytanie i problem znajdzie idealne rozwiązanie 😇"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Wiktoria</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-card reveal">
-                    <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
-                    <p class="testimonial-text">"Mamy małego Aniołka Najlepsza dbałość o najmniejsze drobiazgi-
-                        dopieszczone maluszki, stały kontakt i wsparcie (nawet po zakupie)! Wspaniała praca z maluchami-
-                        widać efekty, kiedy nasze maleństwo do nas trafiło. Moim marzeniem było trafić na taką
-                        profesjonalną hodowlę i szczęście mi dopisało!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Patka</h4>
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Mamy małego Aniołka❤️ Najlepsza dbałość o najmniejsze drobiazgi- dopieszczone maluszki, stały kontakt i wsparcie (nawet po zakupie)! Wspaniała praca z maluchami- widać efekty, kiedy nasze maleństwo do nas trafiło. Moim marzeniem było trafić na taką profesjonalną hodowlę i szczęście mi dopisało! Dziękujemy raz jeszcze."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Patka</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Super kontakt z hodowlą. Pieski dużo nauczone i bardzo zadbane. Bardzo jesteśmy zadowoleni."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Katarzyna</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Polecam zdecydowanie. Zawsze można liczyć na pomoc i radę. Szczeniaczki są socjalizowane co widać przy odbiorze – nie trzeba pod tym względem z nimi pracować, nauczone są załatwiania się na matę, co naprawdę się przydaje. Polecam!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Marzena</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Z całego serca polecam Panią Anetę i jej hodowlę. Cały proces od urodzin pieska wspaniale poprowadzony. Regularne wiadomości i zdjęcia. Widać od razu, że pieski są otoczone największą miłością i opieką. Przepiękne i co najważniejsze zdrowe! Pani Aneta zawsze służy pomocą. Jeszcze raz dziękujemy za naszą Daisy."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Kinga</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Bardzo polecam hodowlę, pieski dobrze wychowane, dobrze ułożone, grzeczne, spokojne. Szczeniaczek „wiedział" do czego służy mata. Kontakt z hodowlą super, Pani bardzo pomocna, chętnie udzielająca odpowiedzi na pytania dotyczące np. kosmetyków czy karmy. Bardzo polecam!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Krzysztof</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Świetny kontakt z Little Angels od samego początku – zdjęcia, filmiki z opieki nad szczeniakiem w okresie jego dorastania u Hodowcy. Zawsze odpowiedź na każde pytanie i przydatna porada na temat pielęgnacji, żywienia itp. – i tak do dnia dzisiejszego. Polecam w 100% w imieniu swoim i Newtona (Dastiego)."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Mariusz</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+                                <p class="testimonial-text">„Bardzo polecam! Profesjonalna opieka nad szczeniakiem!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Klaudia</h4>
+                                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    
+                    <div class="swiper-pagination testimonials-pagination"></div>
                 </div>
 
+                <button class="testimonials-next t-nav-btn" aria-label="Następna opinia">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
+
+            <!-- Zostaw opinię CTA -->
+            <div class="review-cta reveal">
+                <p class="review-cta-text">Byłeś naszym klientem? Podziel się swoją opinią! 🐾</p>
+                <div class="review-cta-buttons">
+                    <a href="https://share.google/1cpYAd4yh8QSfeSTN" target="_blank" rel="noopener" class="review-btn google-review-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path d="M21.805 10.023H12v3.977h5.618C17.026 16.18 14.76 17.5 12 17.5c-3.038 0-5.5-2.462-5.5-5.5s2.462-5.5 5.5-5.5c1.395 0 2.663.524 3.627 1.373l2.828-2.828C16.697 3.69 14.455 2.5 12 2.5 6.753 2.5 2.5 6.753 2.5 12S6.753 21.5 12 21.5c5.523 0 9.5-3.873 9.5-9.5 0-.642-.064-1.267-.195-1.977z"/>
+                        </svg>
+                        Oceń nas w Google
+                    </a>
+                    <a href="https://www.facebook.com/hodowlalittleangels/reviews" target="_blank" rel="noopener" class="review-btn facebook-review-btn">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Oceń nas na Facebook
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 

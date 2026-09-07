@@ -170,6 +170,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             });
         }
+
+        // Testimonials Slider
+        const testimonialsEl = document.querySelector('.testimonialsSwiper');
+        if (testimonialsEl) {
+            new Swiper(testimonialsEl, {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: document.querySelector('.testimonials-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: document.querySelector('.testimonials-next'),
+                    prevEl: document.querySelector('.testimonials-prev'),
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2, spaceBetween: 24 },
+                    1024: { slidesPerView: 3, spaceBetween: 28 },
+                },
+            });
+        }
     };
 
     // If Swiper is already loaded, run immediately, otherwise poll slightly

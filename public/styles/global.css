@@ -108,6 +108,7 @@ img {
 /* Section Utilities */
 section {
     padding: 80px 0;
+    scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
 .section-title {
@@ -288,8 +289,8 @@ section {
     position: relative;
 }
 
-/* Dark Overlay – gradient od lewej ciemny, prawy jaśniejszy */
-.swiper-slide::before {
+/* Dark Overlay – gradient od lewej ciemny, prawy jaśniejszy – TYLKO w hero */
+.heroSwiper .swiper-slide::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -2546,11 +2547,17 @@ section {
     padding: 80px 0;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+/* Swiper wrapper dla opinii */
+.testimonialsSwiper {
+    width: 100%;
+    padding: 10px 0 50px !important; /* Odzyskujemy miejsce na paginację */
+    position: relative;
     margin-top: 40px;
+}
+
+.testimonialsSwiper .swiper-slide {
+    height: auto;
+    display: flex;
 }
 
 .testimonial-card {
@@ -2601,8 +2608,192 @@ section {
 
 .testimonial-stars {
     color: #FFD700;
-    /* Gold color for stars */
     font-size: 0.9rem;
+}
+
+/* Zewnętrzny układ ze strzałkami po bokach slidera: [◀] [  slider  ] [▶] */
+.testimonials-slider-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.testimonialsSwiper {
+    flex-grow: 1;
+    overflow: hidden;
+    width: calc(100% - 120px); /* Odejmuje miejsce na przyciski */
+}
+
+/* Przyciski nawigacyjne */
+.t-nav-btn {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-white);
+    color: var(--primary-blue);
+    border: 1.5px solid rgba(69,105,177,0.25);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.t-nav-btn i {
+    color: var(--primary-blue) !important;
+    transition: color 0.3s ease;
+}
+
+.t-nav-btn:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    box-shadow: 0 5px 18px rgba(69,105,177,0.35);
+    transform: scale(1.1);
+}
+
+.t-nav-btn:hover i {
+    color: #fff !important;
+}
+
+.t-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .t-nav-btn {
+        display: none; /* Na mobile ukrywamy przyciski bokowe, bo zajmują cenne miejsce. Użytkownik przesuwa palcem. */
+    }
+    .testimonialsSwiper {
+        width: 100%;
+    }
+}
+
+.testimonials-pagination .swiper-pagination-bullet {
+    background: var(--primary-blue);
+    opacity: 0.3;
+}
+
+.testimonials-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-blue);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .testimonialsSwiper {
+        padding: 10px 10px 55px !important;
+    }
+
+    .testimonials-prev,
+    .testimonials-next {
+        display: none !important;
+    }
+}
+
+
+/* --- Review CTA (Zostaw opinię) --- */
+.review-cta {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0 0;
+}
+
+.review-cta-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.review-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.review-btn svg {
+    flex-shrink: 0;
+}
+
+.google-review-btn {
+    background: #fff;
+    color: #444;
+    border-color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.google-review-btn svg {
+    fill: #EA4335;
+}
+
+.google-review-btn:hover {
+    background: #EA4335;
+    color: #fff;
+    border-color: #EA4335;
+    box-shadow: 0 6px 18px rgba(234,67,53,0.3);
+    transform: translateY(-2px);
+}
+
+.google-review-btn:hover svg {
+    fill: #fff;
+}
+
+.facebook-review-btn {
+    background: #fff;
+    color: #1877F2;
+    border-color: #1877F2;
+    box-shadow: 0 4px 12px rgba(24,119,242,0.1);
+}
+
+.facebook-review-btn i {
+    color: #1877F2 !important;
+    transition: color 0.3s ease;
+}
+
+.facebook-review-btn:hover {
+    background: #1877F2;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(24,119,242,0.35);
+    transform: translateY(-2px);
+}
+
+.facebook-review-btn:hover i {
+    color: #fff !important;
+}
+
+@media (max-width: 480px) {
+    .review-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* --- Cookie Banner --- */
