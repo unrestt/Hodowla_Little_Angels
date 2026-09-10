@@ -245,10 +245,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalTitle) modalTitle.textContent = litter.nazwa_miotu;
             if (modalDate) modalDate.textContent = "Data urodzenia: " + (litter.data_urodzenia ? litter.data_urodzenia.split('-').reverse().join('.') : '');
             if (modalImage) {
-                modalImage.src = "/assets/images/mioty_images/" + litter.img;
+                const imgSrc = "/assets/images/mioty_images/" + litter.img;
+                modalImage.src = imgSrc;
                 modalImage.alt = litter.nazwa_miotu;
+                
+                const modalImageLink = document.getElementById('modal-image-link');
+                if (modalImageLink) {
+                    modalImageLink.href = imgSrc;
+                    // Jeśli GLightbox był już zainicjowany, przeładuj go by złapał nowy href
+                    if (window.litterLightbox) {
+                        window.litterLightbox.reload();
+                    }
+                }
             }
-
             if (modalPuppiesList) {
                 modalPuppiesList.innerHTML = '';
                 if (litter.szczenieta && litter.szczenieta.length > 0) {
@@ -273,6 +282,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10);
             document.body.classList.add('no-scroll');
         };
+        
+        // Initialize GLightbox for the modal image
+        if (typeof GLightbox !== 'undefined') {
+            window.litterLightbox = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: false,
+                zoomable: true
+            });
+        }
     }
 
     // --- FAQ Accordion ---

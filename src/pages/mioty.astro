@@ -31,7 +31,9 @@ const formatDate = (dateString: string) => {
                     <div id="current-litter-container">
                         <div class="current-litter-display">
                             <div class="current-litter-image">
-                                <img src={`/assets/images/mioty_images/${currentLitter.img}`} alt={currentLitter.nazwa_miotu} />
+                                <a href={`/assets/images/mioty_images/${currentLitter.img}`} class="glightbox" data-gallery="current-litter-gallery">
+                                    <img src={`/assets/images/mioty_images/${currentLitter.img}`} alt={currentLitter.nazwa_miotu} />
+                                </a>
                             </div>
                             <div class="current-litter-info">
                                 <h3>{currentLitter.nazwa_miotu}</h3>
@@ -79,9 +81,21 @@ const formatDate = (dateString: string) => {
                                 <div class="romeo-gallery-container">
                                     <div class="swiper romeoSwiper">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" alt="Romeo - zdjęcie 1" /></div>
-                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" alt="Romeo - zdjęcie 2" /></div>
-                                            <div class="swiper-slide"><img src="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" alt="Romeo - zdjęcie 3" /></div>
+                                            <div class="swiper-slide">
+                                                <a href="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" class="glightbox" data-gallery="romeo-gallery">
+                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" alt="Romeo - zdjęcie 1" />
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" class="glightbox" data-gallery="romeo-gallery">
+                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" alt="Romeo - zdjęcie 2" />
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" class="glightbox" data-gallery="romeo-gallery">
+                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" alt="Romeo - zdjęcie 3" />
+                                                </a>
+                                            </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
                                         <div class="swiper-button-next"></div>
@@ -135,7 +149,9 @@ const formatDate = (dateString: string) => {
             </div>
             <div class="modal-body">
                 <div class="modal-image-container">
-                    <img id="modal-image" src="" alt="Zdjęcie miotu">
+                    <a id="modal-image-link" href="#" class="glightbox" data-gallery="litter-gallery">
+                        <img id="modal-image" src="" alt="Zdjęcie miotu">
+                    </a>
                 </div>
                 <div class="modal-puppies">
                     <h3>Szczenięta</h3>
