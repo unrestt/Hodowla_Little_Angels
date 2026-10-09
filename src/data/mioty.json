@@ -511,7 +511,7 @@
     "nazwa_miotu": "Miot R",
     "data_urodzenia": "2026-08-04",
     "img": "Miot_R.jpeg",
-    "current": true,
+    "current": false,
     "szczenieta": [
       {
         "imie": "Rosalia",
@@ -531,7 +531,7 @@
       {
         "imie": "Romeo",
         "plec": "M",
-        "reserved": false
+        "reserved": true
       }
     ]
   }

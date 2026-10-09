@@ -5,7 +5,7 @@ import mioty from '../data/mioty.json';
 const currentLitter = mioty.find(m => m.current);
 const historyLitters = mioty
     .filter(m => !m.current)
-    .sort((a, b) => new Date(b.data_urodzenia).getTime() - new Date(a.data_urodzenia).getTime());
+    .sort((a, b) => b.nazwa_miotu.localeCompare(a.nazwa_miotu));
 
 const formatDate = (dateString: string) => {
     if (!dateString) return "";
@@ -65,51 +65,12 @@ const formatDate = (dateString: string) => {
                                 <a href="/#kontakt" class="contact-btn-litter" style="margin-top: 20px;">Zapytaj o szczeniaka</a>
                             </div>
                         </div>
-
-                        {currentLitter.nazwa_miotu === 'Miot R' && (
-                            <div class="romeo-premium-card">
-                                <div class="romeo-info">
-                                    <h4 class="romeo-name">Romeo <i class="fas fa-mars" style="color: #4569b1;"></i></h4>
-                                    <p class="romeo-desc">Romeo to nasz wyjątkowy, uroczy i bardzo kontaktowy chłopak o pięknej budowie. Uwielbia zabawy, przytulanie i spędzanie czasu z człowiekiem. Szuka kochającej rodziny, której odda całe swoje małe psie serduszko!</p>
-                                    <ul class="romeo-features">
-                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i>zaszczepiony i odrobaczony stosownie do wieku</li>
-                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Otrzyma pełną dokumentację i rodowód ZHPR UCI</li>
-                                        <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Opuści hodowlę z bogatą wyprawką</li>
-                                    </ul>
-                                    <a href="/#kontakt" class="btn btn-hero romeo-btn">Zapytaj o Romeo</a>
-                                </div>
-                                <div class="romeo-gallery-container">
-                                    <div class="swiper romeoSwiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" class="glightbox" data-gallery="romeo-gallery">
-                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_1.jpeg" alt="Romeo - zdjęcie 1" />
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" class="glightbox" data-gallery="romeo-gallery">
-                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_2.jpeg" alt="Romeo - zdjęcie 2" />
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" class="glightbox" data-gallery="romeo-gallery">
-                                                    <img src="/assets/images/dostepne_szczenieta/Romeo_3.jpeg" alt="Romeo - zdjęcie 3" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 ) : (
                     <div class="no-litters-message">
-                        <i class="fa-solid fa-paw"></i>
+                        <i class="fa-solid fa-paw" style="font-size: 3rem; margin-bottom: 1.2rem; display: block;"></i>
                         <p>Obecnie nie posiadamy dostępnych szczeniąt. Zapraszamy do śledzenia naszych mediów społecznościowych.</p>
-                        <a href="/#kontakt" class="btn btn-hero" style="margin-top: 15px;">Zapisz się na listę oczekujących</a>
+                        <a href="/#kontakt" class="btn btn-hero" style="margin-top: 35px;">Zapisz się na listę oczekujących</a>
                     </div>
                 )}
             </div>
